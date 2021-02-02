@@ -277,3 +277,86 @@ public:
 		else return false;
 	}
 };
+
+bool NegativeRows()
+{
+	return dementia(-1);
+}
+
+bool ZeroRows()
+{
+	return dementia(0);
+}
+
+bool PositiveRows()
+{
+	return !dementia(3);
+}
+
+bool OverloadRows()
+{
+	return dementia(INT_MAX);
+}
+
+bool NegativeCols()
+{
+	int m = -2;
+	return dementia(1, m);
+}
+
+bool ZeroCols()
+{
+	int m = 0;
+	return dementia(0, m);
+}
+
+bool PosEqualCols()
+{
+	int m = 3;
+	return !dementia(3, m);
+}
+
+bool PosNonEqualCols()
+{
+	int m = 2;
+	return !dementia(3, m);
+}
+
+bool OverloadCols()
+{
+	int m = INT_MAX;
+	return dementia(3, m);
+}
+
+bool OneMenu()
+{
+	return MENU(1);
+}
+
+bool ZeroMenu()
+{
+	return !MENU(0);
+}
+
+bool WrongMenu()
+{
+	return !MENU(10);
+}
+
+int main()
+{
+	if (!NegativeRows()
+		|| !ZeroRows()
+		|| !PositiveRows()
+		|| !OverloadRows()
+		|| !NegativeCols()
+		|| !ZeroCols()
+		|| !PosEqualCols()
+		|| !PosNonEqualCols()
+		|| !OverloadCols()
+		|| !OneMenu()
+		|| !ZeroMenu()
+		|| !WrongMenu())
+		return 1;
+	return 0;
+}
