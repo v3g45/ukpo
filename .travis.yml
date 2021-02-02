@@ -1,8 +1,0 @@
-language: cpp
-compiler:
-  - g++
-  
-script:
-  - mkdir build
-  - cd build
-  - ./runTests
