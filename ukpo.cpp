@@ -41,42 +41,6 @@ int inputint()
 	return x;
 }
 
-double inputdouble()
-{
-	double x; int i = 0; //show message in actual program, not here
-	std::cin >> x;
-	while (std::cin.fail() || std::cin.get() != '\n') // Eternal gratitude to my friend who helped me with this part
-	{
-		std::cin.clear();
-		std::cin.ignore(std::cin.rdbuf()->in_avail());
-		preset_mes(i);
-		if (i < 100)
-			i++;
-		std::cin >> x;
-	}
-	return x;
-}
-
-double* inputdouble1dmass(double* mass, int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		std::cout << "Input element [" << i + 1 << "]: ";
-		mass[i] = inputdouble();
-	}
-	return mass;
-}
-
-double** inputdouble2dmass(double** mass, int n, int m)
-{
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < m; j++)
-		{
-			std::cout << "Input element [" << i + 1 << "][" << j + 1 << "]: ";
-			mass[i][j] = inputdouble();
-		}
-	return mass;
-}
 
 bool dementia(int n)
 {
