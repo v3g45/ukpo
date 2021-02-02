@@ -277,3 +277,44 @@ public:
 		else return false;
 	}
 };
+
+void main()
+{
+	std::cout << "Welcome to my Master's new program! I believe that this is our first meeting. My name is Chiru." << std::endl;
+	std::cout << "I am an AI of sorts, and my purpose is to guide people through my Master's programs." << std::endl;
+	std::cout << "You're not reading this, are you? Well, can't say I'm surprised." << std::endl;
+	int n = inputint();
+	while (dementia(n))
+	{
+		std::cout << "HOLD IT RIGHT THERE! What did I JUST say about the incorrect inputs?! Repeat: " << std::endl;
+		n = inputint();
+	}
+
+	std::cout << "Next, input number of columns: " << std::endl;
+	int m = inputint();
+	while (dementia(n, m))
+	{
+		std::cout << "WAIT A DAMN SECOND! What did I say about the incorrect inputs?! Repeat: " << std::endl;
+		m = inputint();
+	}
+
+	MatriX MAT(n, m);
+	MAT.setMain_matr();
+	MAT.setFree_matr();
+	std::cout << "This is your matrix: " << std::endl;
+	MAT.MatPrint();
+	MAT.setSol();
+
+	int ch = 1;
+	while (MENU(ch)) 
+	{
+		std::cout << "Please input 1 to calculate or 0 to quit: " << std::endl;
+		ch = inputint();
+		if (MENU(ch))
+			MAT.SolPrint();
+		else if (ch != 0)
+			std::cout << "I gave you two choices, and you still managed to input incorrectly? Impressive." << std::endl;
+	}
+	std::cout << "That concludes my Master's program. I hope you were satisfied with the results. " << std::endl;
+	getchar();
+}
