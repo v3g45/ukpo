@@ -1,19 +1,10 @@
 sudo: false
 language: cpp
 compiler:
-  - g++
-os:
-  - linux
+  - с++
 
-addons:
-  apt:
-    packages:
-    - gcc-4.8
-    - g++-4.8
-    - clang
 
-before install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
+
 install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 script:
