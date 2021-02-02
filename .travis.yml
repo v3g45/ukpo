@@ -4,7 +4,7 @@ compiler:
 os:
   - linux
 root:
--dist
+  - dist
 addons:
   apt:
     packages:
