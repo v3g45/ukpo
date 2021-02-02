@@ -25,6 +25,7 @@ void preset_mes(int t)
 		std::cout << ">>" << std::endl;
 }
 
+
 int inputint()
 {
 	int x; int i = 0; //show message in actual program, not here
