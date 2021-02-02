@@ -37,7 +37,7 @@ int inputint()
 		preset_mes(i);
 		if (i < 100)
 			i++;
-		std::cin >> x
+		std::cin >> x;
 	}
 	return x;
 }
