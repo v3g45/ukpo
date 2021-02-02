@@ -1,14 +1,8 @@
-sudo: false
 language: cpp
 compiler:
-  - с++
-
-
-
-install:
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+  - g++
+  
 script:
   - mkdir build
   - cd build
-  - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
   - ./runTests
