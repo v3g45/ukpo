@@ -3,7 +3,8 @@ compiler:
   - g++
 os:
   - linux
-
+root:
+-dist
 addons:
   apt:
     packages:
